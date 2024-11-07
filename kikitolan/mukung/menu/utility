@@ -1,0 +1,149 @@
+#!/bin/bash
+# //====================================================
+# //	System Request:Debian 9+/Ubuntu 18.04+/20+
+# //	Author:	Julak Bantur
+# //	Dscription: Xray MultiPort
+# //	email: putrameratus2@gmail.com
+# //  telegram: https://t.me/Cibut2d
+# //====================================================
+# // font color configuration | JULAK BANTUR AUTOSCRIPT
+###########- COLOR CODE -##############
+DF='\e[39m'
+Bold='\e[1m'
+Blink='\e[5m'
+yell='\e[33m'
+RED='\033[0;31m'
+green='\e[32m'
+PURPLE='\e[35m'
+cyan='\e[36m'
+LRED='\e[91m'
+Lgreen='\e[92m'
+Lyellow='\e[93m'
+GREEN='\033[0;32m'
+ORANGE='\033[0;33m'
+LIGHT='\033[0;37m'
+grenbo="\e[92;1m"
+blue="\033[0;34m"
+Blue="\033[36m"
+NC='\e[0m'
+gray="\e[1;30m"
+KIRI="\033[1;32m>\033[1;33m>\033[1;31m>\033[1;31m"
+BGX="\033[42m"
+###########- COLOR CODE -##############
+UPDATE="https://sc1.bagusvpn.me/"
+clear
+echo -e "\033[1;93m┌──────────────────────────────────────────┐\033[0m"
+echo -e "            MENU SYSTEM                $NC"
+echo -e "\033[1;93m└──────────────────────────────────────────┘\033[0m"
+echo -e "\033[1;93m┌──────────────────────────────────────────┐\033[0m"
+echo -e "  ${ORANGE}01${NC} \033[0;36m Panel bot telegram ${NC}"
+echo -e "  ${ORANGE}02${NC} \033[0;36m Notifikasi bot telegram ${NC}"
+echo -e "  ${ORANGE}03${NC} \033[0;36m Panel tambahan ${NC}"
+echo -e "  ${ORANGE}04${NC} \033[0;36m DNS nonton ${NC}"
+echo -e "  ${ORANGE}05${NC} \033[0;36m Speedtest ${NC}"
+echo -e "  ${ORANGE}06${NC} \033[0;36m Reboot otomatis ${NC}"
+echo -e "  ${ORANGE}07${NC} \033[0;36m Ganti Banner SSH ${NC}"
+echo -e "  ${ORANGE}08${NC} \033[0;36m Info semua port ${NC}"
+echo -e "  ${ORANGE}09${NC} \033[0;36m Hapus Histori ${NC}"
+echo -e "  ${ORANGE}10${NC} \033[0;36m Hapus Sampah ${NC}"
+echo -e "  ${ORANGE}11${NC} \033[0;36m Hapus semua akun expired ${NC}"
+echo -e "  ${ORANGE}12${NC} \033[0;36m Fix eror domain ${NC}"
+echo -e "  ${ORANGE}13${NC} \033[0;36m Fix eror haproxy ${NC}"
+echo -e "  ${ORANGE}14${NC} \033[0;36m Monitor CPU ${NC}"
+echo -e "  ${ORANGE}15${NC} \033[0;36m Daftarkan IP VPS baru ${NC}"
+echo -e "  ${ORANGE}16${NC} \033[0;36m Notifikasi install script ${NC}"
+echo -e "  ${ORANGE}17${NC} \033[0;36m Install udp custom ${NC}"
+echo -e "  ${ORANGE}18${NC} \033[0;36m Cek Bandwith ${NC}"
+echo -e "  ${ORANGE}00${NC} \033[0;36m Kembali ke menu utama ${NC}"
+echo -e "  ${ORANGE}99${NC} \033[0;36m Keluar ${NC}"
+echo -e "\033[1;93m└──────────────────────────────────────────┘\033[0m"
+echo -e ""
+
+read -p "Select From Options [0 - 99]: " menu
+
+case $menu in
+1)
+    clear
+    add-bot-panel
+    ;;
+2)
+    clear
+    bot
+    ;;
+3)
+    clear
+    m-panel
+    ;;
+4)
+    clear
+    wget -q https://raw.githubusercontent.com/Jengkolonline/nonton/main/nf.sh && chmod +x nf.sh && ./nf.sh
+    ;;
+5)
+    clear
+    speedtest
+    ;;
+6)
+    clear
+    autoreboot
+    ;;
+7)
+    clear
+    nano /etc/kyt.txt
+    ;;
+8)
+    clear
+    prot
+    ;;
+9)
+    clear
+    clearlog
+    ;;
+10)
+    clear
+    clearcache
+    ;;
+11)
+    clear
+    xp
+    ;;
+12)
+    clear
+    fixcert
+    ;;
+13)
+    clear
+    fixhap
+    ;;
+14)
+    clear
+    gotop
+    ;;
+15)
+    clear
+    add-ip
+    ;;
+16)
+    clear
+    exp-onoff
+    ;;
+17)
+    clear
+    rm -rf udp-custom.sh && wget -q https://udp.bagusvpn.me/udp-custom.sh &&  chmod +x udp-custom.sh && ./udp-custom.sh
+    ;;
+18)
+    clear
+    bw
+    ;;
+0)
+    clear
+    menu
+    ;;
+99)
+    clear
+    exit
+    ;;
+*)
+    clear
+    utility
+    ;;
+esac
